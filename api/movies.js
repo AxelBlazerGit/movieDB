@@ -1,11 +1,11 @@
-import fetch from 'node-fetch';
+const API_KEY = process.env.API_KEY;
 
 export default async function handler(req, res) {
     const { query } = req.query;
 
     const url = query 
-        ? `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${query}`
-        : `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.API_KEY}&page=1`;
+        ? `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`
+        : `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
 
     try {
         const response = await fetch(url);
