@@ -1,0 +1,9 @@
+{
+    "name": "movie-search-backend",
+    "version": "1.0.0",
+    "main": "movies.js",
+    "dependencies": {
+        "node-fetch": "^3.3.2"
+    },
+    "type": "module"
+}
